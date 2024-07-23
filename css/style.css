@@ -1,0 +1,23 @@
+body {
+    font-family: 'Nunito';
+}
+
+#bottom-arrow:after {
+    content:'';
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #F9F9F9;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+/*  
+title color #363636 
+#3CE0A0
+#E4F4ED
+#F9F9F9
+
+flex flex-col justify-center items-center text-sm w-5/6
+*/
