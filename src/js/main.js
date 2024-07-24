@@ -3,26 +3,43 @@
 const PROFILE_MENU = document.querySelector("#profile-menu");
 const PROFILE_ICON = document.querySelector("#profile-picture");
 const PROFILE_ARROW = document.querySelector("#profile-menu-arrow");
+const SIDE_MENU_ELEMENTS = document.querySelectorAll("#side-menu>li");
+const MOBILE_MENU_ELEMENTS = document.querySelectorAll("#mobile-side-menu>li");
+const BURGER_ICON = document.querySelector('#burger-icon');
+const MOBILE_MENU = document.querySelector("#mobile-menu");
+
+// FUNCTION 
 
 function toggleProfileMenu() {
-  if (PROFILE_MENU.classList.contains("hidden")) {
-    // PROFILE_ARROW get black and point up
-  } else {
-    // PROFILE_ARROW get green and upoint down
-  }
+  PROFILE_ARROW.classList.toggle("active-arrow");
+  PROFILE_ARROW.classList.toggle("rotate-180");
   PROFILE_MENU.classList.toggle("hidden");
-  PROFILE_MENU.classList.toggle("opacity-0");
 }
 
 // EVENT LISTENER
-PROFILE_ARROW.addEventListener("click", toggleProfileMenu);
 
+BURGER_ICON.addEventListener("click", () => {
+  MOBILE_MENU.classList.toggle("closed")
+})
+PROFILE_ARROW.addEventListener("click", toggleProfileMenu);
 PROFILE_ICON.addEventListener("click", toggleProfileMenu);
 
-// $(window).click(function() {
-//     //Hide the menus if visible
-//   });
+for (let li of SIDE_MENU_ELEMENTS) {
+  li.addEventListener("click", () => {
+    for (let ki of SIDE_MENU_ELEMENTS) {
+      ki.classList.remove("active-submenu")
+    }
+    li.classList.add("active-submenu")
+  })
+}
 
-//   $('#menucontainer').click(function(event){
-//     event.stopPropagation();
-//   });
+for (let li of MOBILE_MENU_ELEMENTS) {
+  li.addEventListener("click", () => {
+    for (let ki of MOBILE_MENU_ELEMENTS) {
+      ki.classList.remove("active-submenu")
+    }
+    li.classList.add("active-submenu")
+    MOBILE_MENU.classList.toggle("closed")
+  })
+}
+

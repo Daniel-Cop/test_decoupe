@@ -14,5 +14,42 @@ body {
     border-right: 50px solid transparent;
 }
 
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#mobile-menu.closed {
+    transform: translateX(-100%);
+}
+
+svg.active-arrow>path {
+    fill: #363636;
+}
+
+li:hover svg path {
+    fill:#363636;
+}
+
+li.active-submenu {
+    color: #363636;
+}
+
+li.active-submenu>ul {
+    display: block;
+}
+
+li.active-submenu svg {
+    display: block;
+}
+
+li.active-submenu svg.aside-menu-arrow {
+    transform: rotate(180deg);
+}
+
+li.active-submenu svg path {
+    fill: #363636;
+}
 
 
