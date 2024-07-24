@@ -13,11 +13,14 @@ body {
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
 }
+
 /*  
 title color #363636 
 #3CE0A0
 #E4F4ED
 #F9F9F9
+grid grid-cols-1 grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+flex flex-col sm:flex-row flex-wrap justify-center items-center
 
-flex flex-col justify-center items-center text-sm w-5/6
+grid grid-cols-1 grid-flow-row sm:grid-cols-3 gap-8 p-8
 */
