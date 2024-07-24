@@ -1,5 +1,5 @@
 // VARAIBLES
-// aside-menu-arrow
+
 const PROFILE_MENU = document.querySelector("#profile-menu");
 const PROFILE_ICON = document.querySelector("#profile-picture");
 const PROFILE_ARROW = document.querySelector("#profile-menu-arrow");
